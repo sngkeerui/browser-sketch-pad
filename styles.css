@@ -6,3 +6,7 @@
     border: 5px black solid;
 }
 
+.gridSquare {
+    box-sizing: border-box;
+    border: 5px black solid;
+}
