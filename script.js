@@ -9,6 +9,12 @@ for (let i = 0; i < 256; i++) {
     })
     container.appendChild(gridSquare);
 } 
+
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", function() {
+    let gridSize = prompt("Enter grid size (max 100)");
+    });
+
 /* 
 The goal is to make the squares divs appear as grids in the 
 container using Flexbox. 
