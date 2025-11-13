@@ -16,7 +16,10 @@ btn.addEventListener("click", function() {
     gridSquare.style.width = `${600/gridSize}px`;
     gridSquare.style.height = `${600/gridSize}px`;
     gridSquare.addEventListener('mouseenter', function() {
-        gridSquare.style.backgroundColor = "blue";
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        gridSquare.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
     })
     container.appendChild(gridSquare);
 } 
