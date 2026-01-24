@@ -1,2 +1,2 @@
-# odin-etch-a-sketch
-[Try](https://krsng-lab.github.io/odin-etch-a-sketch/) it for yourself!
+# Browser Sketch Pad
+[Try](https://sngkeerui.github.io/browser-sketch-pad/) it for yourself!
