@@ -4,6 +4,8 @@ const palette = document.getElementById("palette");
 
 const create = document.getElementById("create");
 
+const reset = document.getElementById("reset");
+
 create.addEventListener("click", () => {
     const gridSize = +prompt("Enter grid size (1-100)");
     if (gridSize < 1 || gridSize > 100 || isNaN(gridSize)) {
@@ -28,3 +30,8 @@ create.addEventListener("click", () => {
         });
         container.appendChild(gridSquare);
     }})
+
+reset.addEventListener("click", () => {
+    const gridSquare = document.querySelectorAll(".gridSquare");
+    gridSquare.forEach(gridSquare => gridSquare.style.backgroundColor = "");
+})
