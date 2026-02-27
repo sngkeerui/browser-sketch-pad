@@ -1,5 +1,7 @@
 const container = document.getElementById("container");
 
+const palette = document.getElementById("palette");
+
 const create = document.getElementById("create");
 
 create.addEventListener("click", () => {
@@ -16,5 +18,13 @@ create.addEventListener("click", () => {
         gridSquare.classList.add("gridSquare");
         gridSquare.style.flex = `0 0 ${100 / gridSize}%`;
         gridSquare.style.height = `${100 / gridSize}%`;
+        gridSquare.addEventListener("mousedown", () => {
+            gridSquare.style.backgroundColor = palette.value;
+        });
+        gridSquare.addEventListener("mouseover", (e) => {
+            if (e.buttons === 1) {
+                gridSquare.style.backgroundColor = palette.value;
+            }
+        });
         container.appendChild(gridSquare);
-}})
+    }})
