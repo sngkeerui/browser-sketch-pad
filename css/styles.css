@@ -16,6 +16,11 @@ main {
     border: 1px solid black;
 }
 
+.gridSquare {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
 #btn {
     display: flex;
     flex-direction: column;
