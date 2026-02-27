@@ -1,12 +1,12 @@
 <h1 align="center">Sketch Pad</h1>
 
 > [!NOTE]
-> This was an older project of mine. I'm improving the code with new things I've learnt since then. You can check out my progress by switching to the `v2-rewrite` branch, or by clicking this [link](https://github.com/sngkeerui/browser-sketch-pad/tree/v2-rewrite).
+> This is a revised version of a Sketch Pad project I worked on a while ago. I've since improved the code with things I've learnt since then.
+> You can preview the latest version of the project [here](https://sngkeerui.github.io/browser-sketch-pad/).
 >
-> You can preview this older version [here](https://sngkeerui.github.io/browser-sketch-pad/).
+> The code of my older version can be found in the [legacy](https://github.com/sngkeerui/browser-sketch-pad/tree/main/legacy) folder, or you can choose to directly preview the older version [here](https://sngkeerui.github.io/browser-sketch-pad/legacy).
 >
 > This project is part of The Odin Project's [Foundations](https://www.theodinproject.com/paths/foundations/courses/foundations) cirriculum.
 
 ## About
 This project was largely about applying programming logic with JavaScript in creating a custom grid container with Flexbox.
-> This project is a work in progress. You can check out the older version of my code by switching to the `main` branch, or by clicking this [link](https://github.com/sngkeerui/browser-sketch-pad/).
