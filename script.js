@@ -1,35 +1,37 @@
-const container = document.querySelector("#container");
+const container = document.getElementById("container");
 
-const btn = document.querySelector("#btn");
-btn.addEventListener("click", function() {
-    let gridSize = prompt("Enter grid size (max 100)");
-    if (gridSize <= 0 || gridSize > 100) {
-    alert("Please enter a valid grid size");
-    return;
+const palette = document.getElementById("palette");
+
+const create = document.getElementById("create");
+
+const reset = document.getElementById("reset");
+
+create.addEventListener("click", () => {
+    const gridSize = +prompt("Enter grid size (1-100)");
+    if (gridSize < 1 || gridSize > 100 || isNaN(gridSize)) {
+        alert("Please enter a valid grid size!");
+        return;
     }
 
     container.innerHTML = "";
 
-    function getRandomColor() {
-        const red = Math.floor(Math.random() * 256);
-        const green = Math.floor(Math.random() * 256);
-        const blue = Math.floor(Math.random() * 256);
-        return `rgb(${red}, ${green}, ${blue})`;
-    }
-    
     for (let i = 0; i < gridSize ** 2; i++) {
-    const gridSquare = document.createElement("div");
-    gridSquare.classList.add("gridSquare");
-    gridSquare.style.width = `${600/gridSize}px`;
-    gridSquare.style.height = `${600/gridSize}px`;
-    gridSquare.addEventListener('mouseenter', () => gridSquare.style.backgroundColor = getRandomColor());
-    container.appendChild(gridSquare);
-}});
+        const gridSquare = document.createElement("div");
+        gridSquare.classList.add("gridSquare");
+        gridSquare.style.flex = `0 0 ${100 / gridSize}%`;
+        gridSquare.style.height = `${100 / gridSize}%`;
+        gridSquare.addEventListener("mousedown", () => {
+            gridSquare.style.backgroundColor = palette.value;
+        });
+        gridSquare.addEventListener("mouseover", (e) => {
+            if (e.buttons === 1) {
+                gridSquare.style.backgroundColor = palette.value;
+            }
+        });
+        container.appendChild(gridSquare);
+    }})
 
-/* 
-The goal is to make the squares divs appear as grids in the 
-container using Flexbox. 
-My current idea is for the dimensions of the square divs to
-adjust dynamically, so that it wraps nicely to fill in the 
-container of a fixed dimension. 
-*/
+reset.addEventListener("click", () => {
+    const gridSquare = document.querySelectorAll(".gridSquare");
+    gridSquare.forEach(gridSquare => gridSquare.style.backgroundColor = "");
+})

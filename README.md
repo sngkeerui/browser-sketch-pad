@@ -9,3 +9,4 @@
 
 ## About
 This project was largely about applying programming logic with JavaScript in creating a custom grid container with Flexbox.
+> This project is a work in progress. You can check out the older version of my code by switching to the `main` branch, or by clicking this [link](https://github.com/sngkeerui/browser-sketch-pad/).
